@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>Battle of Bookworms</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+      *:before,
+      *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #080710;
+        height: auto;
+        overflow-y: scroll;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .background {
+        width: 430px;
+        height: 520px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+      }
+      .background .shape {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 55%;
+      }
+      .shape:first-child {
+        background: linear-gradient(#1845ad, #23a2f6);
+        left: -107px;
+        top: -4px;
+      }
+      .shape:last-child {
+        background: linear-gradient(to right, #ff512f, #f09819);
+        right: -95px;
+        bottom: -485px;
+      }
+
+      .container {
+        background-color: rgba(255, 255, 255, 0.13);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+      }
+
+      form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 450px;
+        padding-top: 32px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-bottom: 43px;
+      }
+      form * {
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+      }
+      form h3 {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 40px;
+        text-align: center;
+        display: flex;
+      }
+
+      label {
+        display: flex;
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      input {
+        display: block;
+        height: 20px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.07);
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 6px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+      ::placeholder {
+        color: #e5e5e5;
+      }
+      button {
+        margin-top: 28px;
+        margin-left: 43px;
+        width: 75%;
+        background-color: #23a2f6;
+        color: #080710;
+        padding: 10px 0;
+        font-size: 18px;
+        font-weight: 400;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <div class="container">
+      <form action="" id="contactForm">
+        <h3>Register Here</h3>
+
+        <label for="teamname">Team Name</label>
+        <input type="text" placeholder="" id="teamname" required />
+
+        <label for="mem1name">Member 1</label>
+        <input type="text" placeholder="Full Name" id="mem1name" required />
+
+        <label for="mail_1">Email of Member 1</label>
+        <input
+          type="email"
+          placeholder="emailid@gmail.com"
+          id="mail_1"
+          required
+        />
+
+        <label for="mem2name">Member 2</label>
+        <input type="text" placeholder="Full Name" id="mem2name" required />
+
+        <label for="mail_2">Email of Member 2</label>
+        <input
+          type="mail"
+          placeholder="emailid@gmail.com"
+          id="mail_2"
+          required
+        />
+
+        <label for="mem1num">Member 1 Number</label>
+        <input
+          type="number"
+          placeholder="+91 8734565219"
+          id="mem1num"
+          required
+        />
+
+        <label for="mem2num">Member 2 Number</label>
+        <input
+          type="number"
+          placeholder="+91 9743686128"
+          id="mem2num"
+          required
+        />
+
+        <label for="proof1">Age proof of member 1</label>
+        <input type="file " name="files[] " id="files ">
+    <!-- click here to upload file -->
+    <input type="hidden "
+           name="url "
+           id="url ">   
+           <button type="button " onclick="uploadimage() ">
+               Upload Image
+            </button>
+           <br><br>
+        <!-- <!-- <input type="file" name="proof1" id="proof1"  accept="image/png, image/jpeg" 
+        onchange="getFile(event)" required />
+        <input type="file" name="proof1[]" id="proof1" required />
+        <label for="proof2">Age proof of member 2</label>
+        <input type="file" name="proof2[]" id="proof2" required /> -->
+
+        <button type="submit">Save & Proceed to Pay</button>
+      </form>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./form1.js"></script>
+  </body>
+</html>
